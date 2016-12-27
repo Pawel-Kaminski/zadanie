@@ -1,0 +1,15 @@
+Instrukcja instalacji programu (dla Windows 10):
+1. WejdŸ na stronê http://www.wampserver.com/en/, pobierz i uruchom plik instalacyjny WampServer. Zainstaluj brakuj¹ce biblioteki Microsoft C++ Redistibutable (dok³adne informacje znajduj¹ siê w oknie instalacyjnym), a nastêpnie zainstaluj WampServer.
+2. Zmieñ wartoœæ zmiennej œrodowiskowej PATH (W³aœciwoœci systemu -> Zaawansowane -> Zmienne œrodowiskowe), dopisuj¹c do niej wybran¹ podczas instalacji lokalizacjê php np. C:\wamp64\bin\php\php7.1.0.
+3. WejdŸ na stronê https://getcomposer.org/download/ i pobierz plik Composer-Setup.exe, a nastêpnie wykonaj instalacjê.
+4. Zmieñ nazwê pliku .env.example na .env.
+5. Uruchom wiersz polecenia, przejdŸ do folderu aplikacji i wykonaj polecenie "composer install".
+6. Za pomoc¹ edytora tekstu (np. Notepad++) utwórz pusty plik w folderze database o nazwie database.sqlite.
+7. WejdŸ na stronê http://www.sqlite.org/download.html, pobierz pliki z dzia³u "Precompiled Binaries for Windows", rozpakuj je i umieœæ w jednym folderze. Nastêpnie zmieñ wartoœæ zmiennej œrodowiskowej PATH, dopisuj¹c do niej lokalizacjê tego folderu.
+8. Uruchom wiersz polecenia, przejdŸ do folderu aplikacji i wykonaj polecenia "php artisan key:generate", "php artisan migrate" oraz "php artisan serve". Pozostaw okno uruchomione.
+
+=======================================================================
+
+1) Aby uruchomiæ aplikacjê, otwórz przegl¹darkê i wpisz http://localhost:8000/
+2) Aby sprawdziæ w bazie sqlite dotychczas wprowadzone liczby, uruchom wiersz polecenia, przejdŸ do folderu database i wykonaj polecenie "sqlite3 database.sqlite", a nastêpnie "SELECT * FROM numbers;"
+3) Aby uruchomiæ testy aplikacji, u¿yj polecenia vendor\bin\phpunit.
